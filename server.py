@@ -143,11 +143,12 @@ class Client:
 		self.received_peer_info = False
 
 if __name__ == '__main__':
-	if len(sys.argv) < 2:
-		print("Usage: ./server.py PORT")
-		sys.exit(1)
+	#if len(sys.argv) < 2:
+	#	print("Usage: ./server.py PORT")
+	#	sys.exit(1)
 
-	port = int(sys.argv[1])
+	#port = int(sys.argv[1])
+	port = 8080
 	reactor.listenUDP(port, ServerProtocol())
 	print('Listening on *:%d' % (port))
 	reactor.run()
